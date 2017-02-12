@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python
 
 import math
 import sys
@@ -15,6 +15,7 @@ arglut['rd'] = (11,7)
 arglut['rs1'] = (19,15)
 arglut['rs2'] = (24,20)
 arglut['rs3'] = (31,27)
+arglut['eh'] = (19,15)
 arglut['aqrl'] = (26,25)
 arglut['pred'] = (27,24)
 arglut['succ'] = (23,20)
@@ -30,6 +31,17 @@ arglut['zimm'] = (19,15)
 arglut['shamt'] = (25,20)
 arglut['shamtw'] = (24,20)
 arglut['vseglen'] = (31,29)
+arglut['cmd17lo'] = (11,7)
+arglut['cmd17hi'] = (31,20)
+arglut['cmd12'] = (31,20)
+arglut['cmd7'] = (31,25)
+arglut['cmd2'] = (26,25)
+arglut['translo'] = (11,7)
+arglut['transhi'] = (24,20)
+arglut['etype1'] = (11,7)
+arglut['etype2'] = (24,20)
+arglut['etype3'] = (31,26)
+
 
 causes = [
   (0x00, 'misaligned fetch'),

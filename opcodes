@@ -242,3 +242,22 @@ fmadd.q   rd rs1 rs2 rs3 rm 26..25=3 6..2=0x10 1..0=3
 fmsub.q   rd rs1 rs2 rs3 rm 26..25=3 6..2=0x11 1..0=3
 fnmsub.q  rd rs1 rs2 rs3 rm 26..25=3 6..2=0x12 1..0=3
 fnmadd.q  rd rs1 rs2 rs3 rm 26..25=3 6..2=0x13 1..0=3
+
+# Engines extension
+
+eng.acq      eh etype1 etype2 etype3         25=0          14..12=0           6..2=0x1E 1..0=3
+eng.rel      eh                 31..27=0 26..25=1 24..20=0 14..12=0 11..7=0x0 6..2=0x1E 1..0=3
+eng.trans    eh translo transhi 31..27=4 26..25=1          14..12=0           6..2=0x1E 1..0=3
+eng.rebind   eh rs2             31..27=2 26..25=1          14..12=0 11..7=0x0 6..2=0x1E 1..0=3
+eng.ehsave   eh rd              31..27=1 26..25=1 24..20=0 14..12=0           6..2=0x1E 1..0=3
+eng.savecnt  eh rd              31..27=5 26..25=1 24..20=0 14..12=0           6..2=0x1E 1..0=3
+eng.save     eh rd rs2          31..27=3 26..25=1          14..12=0           6..2=0x1E 1..0=3
+eng.restore  eh rd rs2          31..27=7 26..25=1          14..12=0           6..2=0x1E 1..0=3
+eng.icmd     eh cmd17lo cmd17hi                            14..12=7           6..2=0x1E 1..0=3
+eng.s1cmd    eh cmd12 rd                                   14..12=1           6..2=0x1E 1..0=3
+eng.s2cmd    eh cmd7  rd rs2                               14..12=2           6..2=0x1E 1..0=3
+eng.s3cmd    eh cmd2  rd rs2 rs3                           14..12=3           6..2=0x1E 1..0=3
+eng.rcmd     eh cmd12 rd                                   14..12=4           6..2=0x1E 1..0=3
+eng.rs1cmd   eh cmd7  rd rs2                               14..12=5           6..2=0x1E 1..0=3
+eng.rs2cmd   eh cmd2  rd rs2 rs3                           14..12=6           6..2=0x1E 1..0=3
+
